@@ -1,0 +1,30 @@
+{
+    "name": "ruut/test",
+    "description": "It's my test task for vacancy of trainee PHP.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Chugunov",
+            "email": "Zebs-BMK@yandex.ru"
+        }
+    ],
+    "require": {},
+    "autoload":
+    {
+        "psr-0": {
+            "MyVendor": "scripts/"
+        }, 
+        "classmap": [
+            "scripts/",
+            "scripts/Logger.php"
+        ],
+        "files":
+        [
+            "scripts/Logger.php",
+            "scripts/FileLogger.php",
+            "scripts/MysqlLogger.php",
+            "scripts/StreamLogger.php"
+        ]
+    }
+}
