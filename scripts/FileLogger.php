@@ -7,7 +7,7 @@ class FileLogger extends Logger
     public function __construct()
     {
         // проверяем, можем ли создать файл (проверка на запись)
-		if(fopen(Config('FILE_PATH'), "w")) {
+		if(is_writable(Config('FILE_PATH'))) {
 			$this->path = Config('FILE_PATH');
         } else {
             //echo $path." failed to open stream: Permission denied.";

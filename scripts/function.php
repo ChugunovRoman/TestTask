@@ -1,7 +1,8 @@
 <?php
-// будто бы берем настройки из конфига 
+// берем настройки из конфига 
 function Config($cfg)
 {
+    $config = parse_ini_file('./config.ini', true);
     switch ($cfg) {
         case 'MYSQL':
             return 1;
@@ -10,15 +11,15 @@ function Config($cfg)
         case 'STREAM':
             return 3;
         case 'HOST':
-            return 'localhost';
+            return $config['mysql_settings']['host'];
         case 'USER':
-            return 'root';
+            return $config['mysql_settings']['username'];
         case 'PASSWORD':
-            return 'typedef';
+            return $config['mysql_settings']['password'];
         case 'NAME_BD':
-            return 'LogDB';
+            return $config['mysql_settings']['namedb'];
         case 'FILE_PATH':
-            return 'file.log';
+            return $config['file_settings']['filepath'];
     }
 }
     
