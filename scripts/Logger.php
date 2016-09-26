@@ -6,8 +6,9 @@ abstract class Logger
     
     public function log($entry)
     {
-        $this->text = date("[Y-m-d H:i:s] ").serialize($entry);
+        $this->text = date("[Y-m-d H:i:s] ").$entry;
         $this->write();
     }
+    
     public function write(){}
 }

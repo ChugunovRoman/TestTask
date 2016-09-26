@@ -21,10 +21,13 @@
         ],
         "files":
         [
+            "scripts/function.php",
             "scripts/Logger.php",
             "scripts/FileLogger.php",
             "scripts/MysqlLogger.php",
-            "scripts/StreamLogger.php"
+            "scripts/StreamLogger.php",
+            "scripts/LoggerFactory.php",
+            "scripts/MysqlDB.php"
         ]
     }
 }

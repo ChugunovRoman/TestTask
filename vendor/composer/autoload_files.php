@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'f3caf2a81c15a870be9a6cd6b6404547' => $baseDir . '/scripts/function.php',
     '0813cc43d80b51bd52b789cebe260081' => $baseDir . '/scripts/Logger.php',
     'a9bb93e0a8cc8a562a2563e697f58e6e' => $baseDir . '/scripts/FileLogger.php',
     '3fcd317c0403b5725fdff2c0134015f7' => $baseDir . '/scripts/MysqlLogger.php',
     'ef768a0a5e69b20ee655681a994a34f6' => $baseDir . '/scripts/StreamLogger.php',
+    'd839d21d5c4bc382cfad022a5618da42' => $baseDir . '/scripts/MysqlDB.php',
 );

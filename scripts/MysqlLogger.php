@@ -4,17 +4,13 @@ class MysqlLogger extends Logger
 {
     private $mysqli;
     
-    public function __construct($host = 'localhost', $user = 'root', $pass = '', $dbname = 'LogDB')
+    public function __construct()
     {
-        $this->mysqli = new mysqli($host, $user, $pass, $dbname);
-        
-        if($this->mysqli->connect_errno) {
-            echo "Error: ".$this->mysqli->connect_error."<br>";
-        }
+        $db = MysqlDB::getInstance();
+        $this->mysqli = $db->getConnection();
     }
     public function write()
-    {
-        
+    {        
         if($stmt = $this->mysqli->prepare('INSERT INTO `log` (LogText) values(?)')) {
             $stmt->bind_param('s', $this->text);
             $stmt->execute(); 

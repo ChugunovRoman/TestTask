@@ -4,13 +4,15 @@ class FileLogger extends Logger
 {
     private $path;
     
-    public function __construct($path = 'server.log')
+    public function __construct()
     {
-        // если нет файла, то создадим его
-		if(!file_exists($path)) {
-			$file = fopen($path, "w");
+        // проверяем, можем ли создать файл (проверка на запись)
+		if(fopen(Config('FILE_PATH'), "w")) {
+			$this->path = Config('FILE_PATH');
+        } else {
+            //echo $path." failed to open stream: Permission denied.";
+            $this->path = 'server.log';
         }
-		$this->path = $path;
     }
     public function write()
     {

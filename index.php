@@ -5,21 +5,21 @@
     <title>Check Logger</title>
 </head>
 <body>
-	<p>WORK</p>
 <?php
     $loader = require_once __DIR__.'/vendor/autoload.php'; // автозагрузка классов (composer)
 
-    // лог в файл
-    $fileLogger = new FileLogger("file.log");
-    $fileLogger->log("Im write to this file. And I do it. NOW!");
-	
-	// лог в mysql
-    $DBLogger = new MysqlLogger("127.0.0.1", "root", "typedef", "LogDB");
-	$DBLogger->log("Im write the log to this table.");
+    $fileLogger = new LoggerFactory(Config('FILE'));
+    $fileLogger = $fileLogger->logger();
+    $fileLogger->log("file");
     
-    // лог в поток
-    $stdoutLogger = new StreamLogger();
-    $stdoutLogger->log("Im write to the stream.");
+    $fileLogger = new LoggerFactory(Config('MYSQL'));
+    $fileLogger = $fileLogger->logger();
+    $fileLogger->log("mysql");
+    
+    $fileLogger = new LoggerFactory(Config('STREAM'));
+    $fileLogger = $fileLogger->logger();
+    $fileLogger->log("stream");
+    
 ?>
 </body>
 </html>

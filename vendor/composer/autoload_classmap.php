@@ -8,6 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'FileLogger' => $baseDir . '/scripts/FileLogger.php',
     'Logger' => $baseDir . '/scripts/Logger.php',
+    'LoggerFactory' => $baseDir . '/scripts/LoggerFactory.php',
+    'MysqlDB' => $baseDir . '/scripts/MysqlDB.php',
     'MysqlLogger' => $baseDir . '/scripts/MysqlLogger.php',
     'StreamLogger' => $baseDir . '/scripts/StreamLogger.php',
 );
