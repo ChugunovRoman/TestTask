@@ -7,11 +7,12 @@ namespace Composer\Autoload;
 class ComposerStaticInit57356f848d3324a2f1585846b4b87d6b
 {
     public static $files = array (
-        'f3caf2a81c15a870be9a6cd6b6404547' => __DIR__ . '/../..' . '/scripts/function.php',
+        'c177a24bbc73eedeab4c6c001c171df2' => __DIR__ . '/../..' . '/scripts/Config.php',
         '0813cc43d80b51bd52b789cebe260081' => __DIR__ . '/../..' . '/scripts/Logger.php',
         'a9bb93e0a8cc8a562a2563e697f58e6e' => __DIR__ . '/../..' . '/scripts/FileLogger.php',
         '3fcd317c0403b5725fdff2c0134015f7' => __DIR__ . '/../..' . '/scripts/MysqlLogger.php',
         'ef768a0a5e69b20ee655681a994a34f6' => __DIR__ . '/../..' . '/scripts/StreamLogger.php',
+        'fbf988f45558d306c63202e6518ca0e9' => __DIR__ . '/../..' . '/scripts/LoggerFactory.php',
         'd839d21d5c4bc382cfad022a5618da42' => __DIR__ . '/../..' . '/scripts/MysqlDB.php',
     );
 
@@ -26,6 +27,7 @@ class ComposerStaticInit57356f848d3324a2f1585846b4b87d6b
     );
 
     public static $classMap = array (
+        'Config' => __DIR__ . '/../..' . '/scripts/Config.php',
         'FileLogger' => __DIR__ . '/../..' . '/scripts/FileLogger.php',
         'Logger' => __DIR__ . '/../..' . '/scripts/Logger.php',
         'LoggerFactory' => __DIR__ . '/../..' . '/scripts/LoggerFactory.php',

@@ -21,7 +21,7 @@
         ],
         "files":
         [
-            "scripts/function.php",
+            "scripts/Config.php",
             "scripts/Logger.php",
             "scripts/FileLogger.php",
             "scripts/MysqlLogger.php",

@@ -15,7 +15,11 @@ class MysqlDB
     
     private function __construct()
     {
-        $this->_connection = new mysqli(Config('HOST'), Config('USER'), Config('PASSWORD'), Config('NAME_BD'));
+        $config = Config::getInstance();
+        $this->_connection = new mysqli($config->getConfig('host', 'mysql_settings'), 
+                                        $config->getConfig('username', 'mysql_settings'),
+                                        $config->getConfig('password', 'mysql_settings'),
+                                        $config->getConfig('namedb', 'mysql_settings'));
         if(mysqli_connect_errno()) {
             throw new Exception("Failed to conencto to MySQL: ".mysqli_connect_error());
         }

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Config' => $baseDir . '/scripts/Config.php',
     'FileLogger' => $baseDir . '/scripts/FileLogger.php',
     'Logger' => $baseDir . '/scripts/Logger.php',
     'LoggerFactory' => $baseDir . '/scripts/LoggerFactory.php',
