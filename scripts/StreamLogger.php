@@ -4,6 +4,6 @@ class StreamLogger extends Logger
 {
     public function write()
     {
-        return fwrite(STDOUT, $this->text."\n");
+        return fwrite(fopen('php://stdout', 'w'), $this->text."\n");
     }
 }

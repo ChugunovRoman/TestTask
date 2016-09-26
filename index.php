@@ -12,13 +12,13 @@
     $fileLogger = $fileLogger->logger();
     $fileLogger->log("file");
     
-//    $fileLogger = new LoggerFactory(Config('MYSQL'));
-//    $fileLogger = $fileLogger->logger();
-//    $fileLogger->log("mysql");
-//    
-//    $fileLogger = new LoggerFactory(Config('STREAM'));
-//    $fileLogger = $fileLogger->logger();
-//    $fileLogger->log("stream");
+    $fileLogger = new LoggerFactory(Config('MYSQL'));
+    $fileLogger = $fileLogger->logger();
+    $fileLogger->log("mysql");
+    
+    $fileLogger = new LoggerFactory(Config('STREAM'));
+    $fileLogger = $fileLogger->logger();
+    $fileLogger->log("stream");
     
 ?>
 </body>
