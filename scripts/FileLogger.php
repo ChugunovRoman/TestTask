@@ -8,8 +8,8 @@ class FileLogger extends Logger
     {
         $config = Config::getInstance();
         // проверяем, можем ли создать файл (проверка на запись)
-		if(is_writable($config->getConfig('filepath', 'file_settings'))) {
-			$this->path = $config->getConfig('filepath', 'file_settings');
+		if(is_writable($config->getConfig('file_settings.filepath'))) {
+			$this->path = $config->getConfig('file_settings.filepath');
         } else {
             //echo $path." failed to open stream: Permission denied.";
             $this->path = 'server.log';

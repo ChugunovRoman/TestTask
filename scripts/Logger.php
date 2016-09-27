@@ -7,6 +7,7 @@ abstract class Logger
     public function log($entry)
     {
         if(is_array($entry) or is_object($entry)) {
+            $some_text = '';
             foreach($entry as $key => $value) {
                 $some_text .= ' ['.$key.'] => '.$value;
             }

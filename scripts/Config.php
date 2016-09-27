@@ -18,9 +18,25 @@ class Config
         $this->cfg_file = parse_ini_file('./config.ini', true);
     }
     
-    public function getConfig($prop = 'logger', $menu = 'logger_settings')
+    private function arrayGet(array $haystack, $needle, $default = null)
+    {    
+        if(array_key_exists($needle, $haystack)) {
+            return $haystack[$needle];
+        }
+
+        foreach(explode('.', $needle) as $key) {
+            if(is_array($haystack) && array_key_exists($key, $haystack))
+                $haystack = $haystack[$key];
+            else
+                return $default;
+        }
+
+        return $haystack;
+    } 
+    
+    public function getConfig($path)
     {
-        return $this->cfg_file[$menu][$prop];
+        return $this->arrayGet($this->cfg_file, $path);
     }
     
     private function __sleep () {}

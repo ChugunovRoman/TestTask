@@ -6,6 +6,6 @@ $config = Config::getInstance();
 $arr = ['key1' => "name", 
         'key2' => "value"];
 
-$fileLogger = new LoggerFactory($config->getConfig());
+$fileLogger = new LoggerFactory($config->getConfig('logger_settings.logger'));
 $fileLogger = $fileLogger->logger();
 $fileLogger->log($arr);
