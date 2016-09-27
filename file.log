@@ -14,3 +14,6 @@
 
 
 [2016-09-27 15:43:54]  [key1] => name [key2] => value
+[2016-09-27 18:18:11] exception 'Exception' with message 'My exception :)' in /var/www/html/index.php:9
+Stack trace:
+#0 {main}

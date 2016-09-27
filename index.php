@@ -10,4 +10,4 @@ $excpt = new Exception("My exception :)");
 
 $fileLogger = new LoggerFactory($config->getConfig('logger_settings.logger'));
 $fileLogger = $fileLogger->logger();
-$fileLogger->log($excpt);
+$fileLogger->log($arr);
