@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'f3caf2a81c15a870be9a6cd6b6404547' => $baseDir . '/scripts/function.php',
     'c177a24bbc73eedeab4c6c001c171df2' => $baseDir . '/scripts/Config.php',
     '0813cc43d80b51bd52b789cebe260081' => $baseDir . '/scripts/Logger.php',
     'a9bb93e0a8cc8a562a2563e697f58e6e' => $baseDir . '/scripts/FileLogger.php',

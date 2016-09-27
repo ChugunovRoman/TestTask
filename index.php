@@ -6,6 +6,8 @@ $config = Config::getInstance();
 $arr = ['key1' => "name", 
         'key2' => "value"];
 
+$excpt = new Exception("My exception :)");
+
 $fileLogger = new LoggerFactory($config->getConfig('logger_settings.logger'));
 $fileLogger = $fileLogger->logger();
-$fileLogger->log($arr);
+$fileLogger->log($excpt);

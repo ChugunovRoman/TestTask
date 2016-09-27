@@ -6,12 +6,17 @@ abstract class Logger
     
     public function log($entry)
     {
-        if(is_array($entry) or is_object($entry)) {
-            $some_text = '';
+        $some_text = '';
+        if(is_array($entry)) {
+            echo "!,";
             foreach($entry as $key => $value) {
                 $some_text .= ' ['.$key.'] => '.$value;
             }
             $entry = $some_text;
+        }
+        if($entry instanceof Exception)
+        {
+            $entry = $entry->__toString();
         }
         $this->text = date("[Y-m-d H:i:s] ").$entry;
         $this->write();
